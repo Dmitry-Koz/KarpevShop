@@ -8,9 +8,15 @@
     max-width: 320px;
     cursor: pointer;
     border-radius: 10px;
+    @media (max-width: 1524px) {
+        padding: 20px 62px 20px 32px;
+    }
 
     &-small {
         padding: 20px 70px 20px 36px;
+        @media (max-width: 1524px) {
+            padding: 16px 62px 16px 32px;
+        }
         .text-menu {
             font-size: 20px;
         }
@@ -60,4 +66,40 @@
             transform: rotate(-45deg) translateY(-70%) translate(7px, 7px);
         }
     } 
+}
+
+.btn-in {
+    padding: 20px 35px;
+    display: inline-block;
+    border-radius: 10px;
+    background: 
+    linear-gradient($bg_color, $bg_color) padding-box,
+    $yellow;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    position: relative;
+    transition: $tran-time transform ease;
+    cursor: pointer;
+
+    @media (max-width: 1524px) {
+        padding: 16px 32px;
+    }
+
+    .text-menu {
+        text-transform: uppercase;
+        background: $yellow;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #EDA90D;
+    }
+
+    &:hover {
+        background: 
+        $yellow padding-box,
+        $yellow; 
+        .text-menu {
+            -webkit-text-fill-color: white;
+            
+        }       
+    }
 }
