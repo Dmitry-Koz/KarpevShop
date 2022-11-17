@@ -511,6 +511,9 @@ body {
     align-items: center;
     padding: 75px 0 80px;
     margin-top: 100px; }
+    @media (max-width: 860px) {
+      .index-block .footer {
+        padding: 30px 0; } }
     .index-block .footer-cont {
       display: flex; }
       .index-block .footer-cont a {
