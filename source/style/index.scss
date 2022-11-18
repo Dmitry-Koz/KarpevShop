@@ -192,9 +192,14 @@
         }
     }
 
-    .peaple {
+    .people {
         display: flex;
         justify-content: center;
+        img {
+            @media (max-width: 1524px) {
+                height: 30px;
+            }
+        }
     }
 
     .box-massage {
@@ -339,10 +344,10 @@
             padding: 50px 5px;
         }
         @media (max-width: 1224px) {
-            padding: 35px 0;
+            padding: 35px 5px;
         }
         @media (max-width: 1024px) {
-            padding: 25px 0;
+            padding: 25px 5px;
         }
 
         &::before {
@@ -471,7 +476,7 @@
         padding: 75px 0 80px;
         margin-top: 100px;
         @media (max-width: 860px) {
-            padding: 30px 0;
+            padding: 30px 0 80px 0;
         }
 
         &-cont {
@@ -479,12 +484,18 @@
             // justify-content: space-between;
             a {
                 margin-right: 75px;
+                @media (max-width: 860px) {
+                    margin-right: 35px;
+                }
             }
             & :last-child {
                 margin-right: 0;
             }
             &--mrg {
                 margin-top: 65px;
+                @media (max-width: 860px) {
+                    margin-top: 0;
+                }
             }
 
             &--menu {

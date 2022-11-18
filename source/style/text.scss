@@ -1,6 +1,6 @@
 .text {
     font-family: inter-400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 130%;
     @media (max-width: 1524px) {
         font-size: 20px;
@@ -50,6 +50,15 @@
         @media (max-width: 1524px) {
             font-size: 28px;
         }
+        @media (max-width: 1224px) {
+            font-size: 23px;
+        }
+        @media (max-width: 1024px) {
+            font-size: 20px;
+        }
+        @media (max-width: 860px) {
+            font-size: 18px;
+        }
     }
 
     &-message {
@@ -75,7 +84,7 @@
 
     &-menu {
         font-family: inter-500;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 29px;
         @media (max-width: 1524px) {
             font-size: 16px;
@@ -85,7 +94,7 @@
 
     &-small {
         font-family: inter-400;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 24px;
         @media (max-width: 1524px) {
             font-size: 16px;
@@ -95,5 +104,12 @@
         &--green {
             color: #57B92A;
         }
+    }
+
+    &-grad {
+        background: $yellow;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #EDA90D;
     }
 }

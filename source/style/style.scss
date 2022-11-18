@@ -13,10 +13,13 @@ a {
 
 body {
     background-color: black;
+    position: relative;
 }
 
 @import 'font';
-@import 'text';
 @import 'vars';
+@import 'text';
 @import 'buttons';
 @import 'index';
+@import 'singin';
+@import 'mobile';

@@ -1,0 +1,82 @@
+.mobile {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    // justify-content: center;
+    // align-items:center;
+    background-color: black;
+    flex-direction: column;
+    // padding: 20px;
+    transition: $tran-time all ease;
+    margin-left: -100vh;
+    opacity: 0;
+
+    &-wrapper {
+        width: 100%;
+    }
+
+    .active {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 5px;
+            height: 100%;
+            background: $yellow;
+
+        }
+    }
+
+    &-item {
+        padding: 15px 20px;
+        border-bottom: 0.5px #3a3b3b solid;
+        font-size: 20px;
+        font-family: inter-400;
+        color: white;
+    }
+
+
+    &-chat {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        // width: 100vh;
+        bottom: 80px;
+        background-color: $bg_color;
+        transition: $tran-time all ease;
+        margin-left: - 100vh;
+        opacity: 0;
+
+        .chat-wrap {
+            width: 100%;
+            display: block;
+        }
+
+        .right-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 100%;
+
+            .ava {
+                display: block;
+            }
+        }
+    }
+
+
+}
+.active {
+    margin-left: 0;
+    opacity: 1;
+}
