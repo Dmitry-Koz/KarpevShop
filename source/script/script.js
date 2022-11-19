@@ -2,7 +2,7 @@ const arrow = document.querySelector('.arrow');
 const lenguageSelect = document.querySelector('.leng-list');
 
 arrow.addEventListener('click', () =>{
-    lenguageSelect.classList.toggle('active');
+    lenguageSelect.classList.toggle('active-len');
     arrow.classList.toggle('active');
     console.log(arrow);
 
@@ -53,8 +53,25 @@ document.querySelector('#more').addEventListener('click', () =>{
 })
 
 document.querySelector('#chat').addEventListener('click', () =>{
-    document.querySelector('.mobile-chat').classList.toggle('active')
-})
+    document.querySelector('.mobile-chat').classList.toggle('active');
+    document.querySelector('.chat-wrap').classList.toggle('active')
+});
 
+const col = document.querySelector('#two').style.width = 0;
+const moreElem = document.querySelector('.btn-more');
+
+let open = false;
+
+moreElem.addEventListener('click', () => {
+    let elWidth = document.querySelector('#width').getBoundingClientRect().width;
+    if (open){
+        document.querySelector('#two').style.width = 0;
+        open = false;
+    }else{
+        document.querySelector('#two').style.width = `${elWidth + 20}px`;
+        open = true;
+    }
+    console.log(elWidth)
+});
 
 // btnExit.addEventListener('click', stok);

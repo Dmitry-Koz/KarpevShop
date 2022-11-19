@@ -18,10 +18,11 @@
 
     &-h2 {
         font-family: golos;
-        font-size: 40px;
+        font-size: 36px;
         line-height: 48px;
+        font-weight: 400;
         @media (max-width: 1524px) {
-            font-size: 36px;
+            font-size: 30px;
             line-height: 43px;
         }
         @media (max-width: 1224px) {
@@ -65,9 +66,13 @@
         font-family: inter-500;
         font-size: 28px;
         line-height: 34px;
+        @media (max-width: 1724px) {
+            font-size: 24px;
+            line-height: 30px;
+        }
 
         @media (max-width: 1524px) {
-            font-size: 24px;
+            font-size: 20px;
             line-height: 30px;
         }
         @media (max-width: 1224px) {

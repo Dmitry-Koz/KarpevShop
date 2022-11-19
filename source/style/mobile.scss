@@ -1,7 +1,7 @@
 .mobile {
     position: fixed;
     top: 90px;
-    left: 0;
+    left: -100vh;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -46,8 +46,8 @@
     &-chat {
         position: absolute;
         top: 90px;
-        left: 0;
-        right: 0;
+        left: -100vh;
+        // right: 0;
         // width: 100vh;
         bottom: 80px;
         background-color: $bg_color;
@@ -63,7 +63,7 @@
         .right-bar {
             position: absolute;
             top: 0;
-            left: 0;
+            left: -100vh;
             right: 0;
             bottom: 0;
             max-width: 100%;
@@ -79,4 +79,6 @@
 .active {
     margin-left: 0;
     opacity: 1;
+    left: 0 !important;
+    right: 0 !important;
 }
