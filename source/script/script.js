@@ -14,21 +14,32 @@ const windReg = document.querySelector('.reg-wind');
 const windSin = document.querySelector('.sin-wind');
 const body = document.querySelector('body');
 const btnExit = document.querySelectorAll('.exit');
-const btnReg = document.querySelector('.reg');
+const fstBtnReg = document.querySelector('.fstreg');
+const twoBtnReg = document.querySelector('.reg');
 const btnin = document.querySelector('.regin');
 
-btnReg.addEventListener('click', () => {
-    windReg.classList.remove('disabled');
-    windSin.classList.add('disabled');
+// console.log(btnReg);
+
+fstBtnReg.addEventListener('click', () => {
+    ifRemove('disabled', windAuth);
+    ifRemove('disabled', windReg);
+    ifAdd('disabled', windSin)
+});
+
+twoBtnReg.addEventListener('click', () => {
+    ifRemove('disabled', windAuth);
+    ifRemove('disabled', windReg);
+    ifAdd('disabled', windSin)
 });
 
 btnin.addEventListener('click', () => {
     windSin.classList.remove('disabled');
     windReg.classList.add('disabled');
 });
-console.log(buttonSingin)
+
 buttonSingin.addEventListener('click', () => {
-    windAuth.classList.remove('disabled');
+    ifRemove('disabled', windAuth);
+    ifRemove('disabled', windReg);
 });
 // for (let i = 0; i<buttonSingin.length; i++) {
 //     console.log(buttonSingin[i])
@@ -38,11 +49,25 @@ buttonSingin.addEventListener('click', () => {
 // };
 
 const stok = () => {
-    windAuth.classList.add('disabled');
-    windSin.classList.remove('disabled');
-    windReg.classList.remove('disabled');
-    windReg.classList.add('disabled');
+    ifAdd('disabled', windAuth);
+    ifAdd('disabled', windSin);
+    ifAdd('disabled', windReg);
+    // windAuth.classList.add('disabled');
+    // windSin.classList.remove('disabled');
+    // windReg.classList.remove('disabled');
+    // windReg.classList.add('disabled');
 };
+
+const ifAdd = (className, el) => {
+    if (!el.classList.contains(className)){
+        el.classList.add(className);
+    }
+}
+const ifRemove = (className, el) => {
+    if (el.classList.contains(className)){
+        el.classList.remove(className);
+    }
+}
 
 for (let i = 0; i<btnExit.length; i++) {
     btnExit[i].addEventListener('click', stok);
@@ -61,14 +86,17 @@ const col = document.querySelector('#two').style.width = 0;
 const moreElem = document.querySelector('.btn-more');
 
 let open = false;
-
+const chatWidth = document.querySelector('.chat-top').getBoundingClientRect().width;
 moreElem.addEventListener('click', () => {
     let elWidth = document.querySelector('#width').getBoundingClientRect().width;
+    
     if (open){
         document.querySelector('#two').style.width = 0;
+        document.querySelector('.chat-top').style.width = `${chatWidth}px`
         open = false;
     }else{
-        document.querySelector('#two').style.width = `${elWidth + 20}px`;
+        document.querySelector('#two').style.width = `${elWidth}px`;
+        document.querySelector('.chat-top').style.width = `${elWidth}px`
         open = true;
     }
     console.log(elWidth)
