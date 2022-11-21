@@ -39,7 +39,7 @@ btnin.addEventListener('click', () => {
 
 buttonSingin.addEventListener('click', () => {
     ifRemove('disabled', windAuth);
-    ifRemove('disabled', windReg);
+    ifRemove('disabled', windSin);
 });
 // for (let i = 0; i<buttonSingin.length; i++) {
 //     console.log(buttonSingin[i])
